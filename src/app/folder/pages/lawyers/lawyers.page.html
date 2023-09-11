@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="false">
+  <ion-toolbar>
+    <ion-chip color="primary">
+      <ion-label> Todos </ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+    <ion-chip>laboral</ion-chip>
+    <ion-chip>civil</ion-chip>
+    <ion-chip>familiar</ion-chip>
+    <ion-searchbar placeholder="Buscar un abogado..." />
+  </ion-toolbar>
+  <ion-list>
+    <c-list-item-profile />
+    <c-list-item-profile />
+    <c-list-item-profile />
+    <c-list-item-profile />
+    <c-list-item-profile />
+  </ion-list>
+  <pagination-controls
+    previousLabel="Atrás"
+    nextLabel="Siguiente"
+  ></pagination-controls>
+</ion-content>

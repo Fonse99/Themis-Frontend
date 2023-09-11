@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="false">
+  <ion-toolbar>
+    <ion-searchbar placeholder="Buscar un formato..."></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-list lines="full">
+    <c-list-item-card *ngFor="let procedure of procedures
+      | paginate: {
+        itemsPerPage: itemsPerPage,
+        currentPage: currentPage,
+        totalItems: counter
+      };
+      let i = index"
+      />
+  </ion-list>
+  <pagination-controls
+    previousLabel="Atrás"
+    nextLabel="Siguiente"
+    class="paginator"
+    (pageChange)="onPageChange($event)"
+  />
+</ion-content>

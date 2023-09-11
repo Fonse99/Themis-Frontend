@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+    <ion-select placeholder="Seleccionar periodo" value="ALL">
+      <ion-select-option value="ALL"> Todos </ion-select-option>
+      <ion-select-option value="TODAY"> Hoy </ion-select-option>
+      <ion-select-option value="YESTERDAY"> Ayer </ion-select-option>
+      <ion-select-option value="PAST_WEEK"> Semana pasada </ion-select-option>
+    </ion-select>
+  </ion-toolbar>
+
+  <ion-list>
+    <c-list-item-profile />
+    <c-list-item-profile />
+    <c-list-item-profile />
+  </ion-list>
+
+  <pagination-controls
+    previousLabel="Atrás"
+    nextLabel="Siguiente"
+  />
+</ion-content>
+
+
+
