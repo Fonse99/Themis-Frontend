@@ -1,0 +1,84 @@
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-button shape="round" (click)="goBack()">
+      <ion-icon  size="large" name="arrow-back" />
+      <ion-avatar>
+        <img
+          src="https://vodrich.com/cdn/shop/articles/2-zoopworld2_1024x.jpg?v=1466231616"
+          alt="Perfil"
+        />
+      </ion-avatar>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Lic. Harvey Specter</ion-title>
+  <ion-buttons slot="end">
+    <ion-button>
+
+     </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content [fullscreen]="false">
+  <!-- <c-chat-bubble
+    variant="own-message"
+    alignment="end"
+    text="Hola Licen, necesito un vuelo"
+  />
+  <c-chat-bubble
+    variant="their-message"
+    alignment="start"
+    text="Hola mucho gusto soy Harvey Specter."
+  />
+  <c-chat-bubble
+    variant="own-message"
+    alignment="end"
+    text="Me agarraron vendiendo mota... "
+  /> -->
+
+  <c-chat-bubble
+  *ngFor="let chat of conversation"
+  [text]="chat.message"
+  [variant]="isOwn(chat.emitter.dni)? 'own-message' : 'their-message'"
+  [alignment]="isOwn(chat.emitter.dni)? 'end' : 'start'"
+  />
+
+  <!-- <c-chat-bubble variant="own-message" alignment="end" text="😞😞😞" /> -->
+</ion-content>
+
+<ion-toolbar >
+  <ion-grid class="ion-align-items-end">
+    <ion-row>
+      <ion-col size="9" sizeXl="11">
+        <ion-row>
+          <ion-col size="9" sizeXl="11">
+             <ion-input
+               type="text"
+               fill="outline"
+               color="secondary"
+               [formControl]="messageField"
+               placeholder="Escribir un mensaje..."
+             />
+
+          </ion-col>
+          <!-- <ion-col size="3" sizeXl="1">
+            <ion-fab vertical="center" horizontal="center">
+              <ion-fab-button>
+                <ion-icon name="attach" size="large" />
+              </ion-fab-button>
+              <ion-fab-list side="top">
+                <ion-fab-button>
+                  <ion-icon name="document" />
+                </ion-fab-button>
+              </ion-fab-list>
+            </ion-fab>
+          </ion-col> -->
+        </ion-row>
+      </ion-col>
+      <ion-col size="3" sizeXl="1">
+        <ion-button color="tertiary" class="button-big" (click)="sendMessage()">
+          <ion-icon name="send" />
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>

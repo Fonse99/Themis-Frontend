@@ -1,0 +1,45 @@
+.bubble-container {
+  box-shadow: 0px 0px 2px 0px;
+  width: 17em;
+  border-radius: 0.5em;
+  padding: 0.1em;
+  margin-block: 0.5em;
+  margin-inline: 0.5em;
+}
+
+.bubble-container > p {
+  width: 95%;
+  margin-inline: 1em;
+}
+
+.own-message {
+  background-color: var(--ion-color-tertiary);
+  color: var(--ion-color-tertiary-contrast);
+}
+
+.their-message {
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+
+.end {
+  margin-left: auto;
+}
+
+.start {
+  margin-right: auto;
+}
+
+.sent-time {
+  height: 1.5em;
+}
+
+.sent-time > p {
+  margin-top: 1em;
+  font-size: x-small ;
+}
+
+p {
+  margin: 0em 0em 0em 0em;
+}
+
